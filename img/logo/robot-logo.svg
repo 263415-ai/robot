@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- 배경 원 -->
+  <circle cx="50" cy="50" r="48" fill="#333333"/>
+
+  <!-- 안테나 -->
+  <line x1="50" y1="18" x2="50" y2="26" stroke="#0099ff" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="50" cy="15" r="4" fill="#0099ff"/>
+
+  <!-- 로봇 머리 -->
+  <rect x="26" y="26" width="48" height="40" rx="10" fill="#ffffff"/>
+
+  <!-- 눈 -->
+  <circle cx="39" cy="46" r="6" fill="#0099ff"/>
+  <circle cx="61" cy="46" r="6" fill="#0099ff"/>
+  <circle cx="39" cy="46" r="2.2" fill="#ffffff"/>
+  <circle cx="61" cy="46" r="2.2" fill="#ffffff"/>
+
+  <!-- 입 -->
+  <rect x="38" y="58" width="24" height="4" rx="2" fill="#333333"/>
+
+  <!-- 좌우 귀(센서) -->
+  <rect x="18" y="38" width="8" height="16" rx="3" fill="#0099ff"/>
+  <rect x="74" y="38" width="8" height="16" rx="3" fill="#0099ff"/>
+
+  <!-- 목/몸통 힌트 -->
+  <rect x="40" y="66" width="20" height="10" rx="3" fill="#ffffff"/>
+</svg>

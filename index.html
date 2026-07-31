@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Robot Manufacturing Co. - 로봇 생산 회사</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== 1. 헤더 ===== -->
+  <header class="header">
+    <div class="logo">
+      <img src="img/logo/robot-logo.svg" alt="Robot Manufacturing Co. 로고">
+      <span>Robot Manufacturing Co.</span>
+    </div>
+
+    <!-- 데스크톱 네비게이션 -->
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="#intro">회사소개</a></li>
+        <li><a href="#history">회사연혁</a></li>
+        <li><a href="#product">제품소개</a></li>
+        <li><a href="#contact">문의</a></li>
+      </ul>
+    </nav>
+
+    <!-- 모바일 햄버거 버튼 -->
+    <button class="hamburger" id="hamburgerBtn" aria-label="메뉴 열기">&#9776;</button>
+
+    <!-- 모바일 드롭다운 메뉴 -->
+    <ul class="mobile-nav" id="mobileNav">
+      <li><a href="#intro">회사소개</a></li>
+      <li><a href="#history">회사연혁</a></li>
+      <li><a href="#product">제품소개</a></li>
+      <li><a href="#contact">문의</a></li>
+    </ul>
+  </header>
+
+  <!-- ===== 2. 메인 슬라이드 ===== -->
+  <section class="slide-section" id="intro">
+    <div class="slide-track" id="slideTrack">
+      <div class="slide-item active"><img src="img/imgslide/r-desk.jpg" alt="슬라이드 이미지 1"></div>
+      <div class="slide-item"><img src="img/imgslide/r-nature.jpg" alt="슬라이드 이미지 2"></div>
+      <div class="slide-item"><img src="img/imgslide/r-night.jpg" alt="슬라이드 이미지 3"></div>
+    </div>
+
+    <button class="slide-arrow prev" id="prevBtn" aria-label="이전 슬라이드">&#10094;</button>
+    <button class="slide-arrow next" id="nextBtn" aria-label="다음 슬라이드">&#10095;</button>
+
+    <div class="slide-dots" id="slideDots">
+      <button class="slide-dot active" data-index="0" aria-label="1번 슬라이드로 이동"></button>
+      <button class="slide-dot" data-index="1" aria-label="2번 슬라이드로 이동"></button>
+      <button class="slide-dot" data-index="2" aria-label="3번 슬라이드로 이동"></button>
+    </div>
+  </section>
+
+  <!-- ===== 3. 회사연혁 섹션 ===== -->
+  <section class="history-section" id="history">
+    <h2 class="section-title">회사연혁</h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-year">2000년</div>
+          <div class="timeline-desc">회사 설립</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-year">2005년</div>
+          <div class="timeline-desc">첫 로봇 제품 출시</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-year">2010년</div>
+          <div class="timeline-desc">국내 점유율 1위 달성</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-year">2015년</div>
+          <div class="timeline-desc">해외 수출 시작</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-year">2020년</div>
+          <div class="timeline-desc">AI 기반 로봇 개발</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-year">2024년</div>
+          <div class="timeline-desc">누적 판매 10만 대 달성</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. 제품소개 섹션 ===== -->
+  <section class="product-section" id="product">
+    <h2 class="section-title">제품소개</h2>
+
+    <div class="product-grid" id="productGrid">
+      <!-- 제품 카드는 JavaScript에서 데이터 기반으로 자동 생성됨 -->
+    </div>
+  </section>
+
+  <!-- ===== 제품 상세 모달 ===== -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box" id="modalBox">
+      <button class="modal-close" id="modalClose" aria-label="닫기">&times;</button>
+      <img id="modalImg" src="" alt="제품 상세 이미지">
+      <div class="modal-info">
+        <h3 id="modalName"></h3>
+        <p class="modal-desc" id="modalDesc"></p>
+        <ul class="modal-specs" id="modalSpecs"></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 5. 푸터 ===== -->
+  <footer class="footer" id="contact">
+    <div class="footer-row">
+      <p class="footer-copyright">&copy; 2024 Robot Manufacturing Company. All rights reserved.</p>
+    </div>
+    <div class="footer-row">
+      <p class="footer-contact">주소: 서울시 강남구 | 전화: 02-1234-5678 | 이메일: info@robot.com</p>
+    </div>
+    <div class="footer-row">
+      <div></div>
+      <div class="footer-sns">
+        <a href="#" target="_blank" rel="noopener">Facebook</a>
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  /* =========================================================
+     1. 메인 슬라이드: 2초 간격 자동 전환 (fade) + 화살표/도트 제어
+  ========================================================= */
+  const slideItems = document.querySelectorAll('.slide-item');
+  const slideDots = document.querySelectorAll('.slide-dot');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  let currentSlide = 0;
+  let slideTimer = null;
+  const SLIDE_INTERVAL = 2000; // 2초 간격
+
+  // 지정한 인덱스의 슬라이드를 화면에 표시
+  function showSlide(index) {
+    slideItems.forEach((item, i) => item.classList.toggle('active', i === index));
+    slideDots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+    currentSlide = index;
+  }
+
+  // 다음 슬라이드로 이동 (마지막이면 처음으로 순환)
+  function nextSlide() {
+    const next = (currentSlide + 1) % slideItems.length;
+    showSlide(next);
+  }
+
+  // 이전 슬라이드로 이동 (처음이면 마지막으로 순환)
+  function prevSlide() {
+    const prev = (currentSlide - 1 + slideItems.length) % slideItems.length;
+    showSlide(prev);
+  }
+
+  // 자동 재생 시작
+  function startAutoSlide() {
+    slideTimer = setInterval(nextSlide, SLIDE_INTERVAL);
+  }
+
+  // 자동 재생 정지 (수동 조작 시 초기화 목적)
+  function stopAutoSlide() {
+    clearInterval(slideTimer);
+  }
+
+  // 수동 조작 후 자동 재생 타이머 재시작
+  function restartAutoSlide() {
+    stopAutoSlide();
+    startAutoSlide();
+  }
+
+  nextBtn.addEventListener('click', () => {
+    nextSlide();
+    restartAutoSlide();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    prevSlide();
+    restartAutoSlide();
+  });
+
+  slideDots.forEach((dot) => {
+    dot.addEventListener('click', () => {
+      const index = Number(dot.dataset.index);
+      showSlide(index);
+      restartAutoSlide();
+    });
+  });
+
+  startAutoSlide();
+
+  /* =========================================================
+     2. 헤더: 모바일 햄버거 메뉴 토글
+  ========================================================= */
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileNav = document.getElementById('mobileNav');
+
+  hamburgerBtn.addEventListener('click', () => {
+    mobileNav.classList.toggle('active');
+  });
+
+  // 모바일 메뉴 항목 클릭 시 메뉴 닫기
+  mobileNav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileNav.classList.remove('active');
+    });
+  });
+
+  /* =========================================================
+     3. 제품소개: 데이터 기반 카드 생성 + 상세 모달
+  ========================================================= */
+  const products = [
+    {
+      name: '로봇팔 X-100',
+      image: 'img/background/robot.jpg',
+      desc: '정밀 제어가 가능한 산업용 다관절 로봇팔로, 조립 및 용접 등 다양한 공정에 활용됩니다. 24시간 무중단 가동이 가능해 생산성을 극대화합니다.',
+      specs: {
+        '크기': '1200 x 800 x 1500 mm',
+        '무게': '250 kg',
+        '용도': '조립, 용접, 이송',
+        '가격대': '5,000 ~ 8,000만원'
+      }
+    },
+    {
+      name: '협업로봇 C-50',
+      image: 'img/background/ai.jpg',
+      desc: '사람과 같은 공간에서 안전하게 작업하는 AI 기반 협업로봇입니다. 충돌 감지 센서를 탑재해 작업자와의 안전한 협업을 보장합니다.',
+      specs: {
+        '크기': '600 x 600 x 900 mm',
+        '무게': '50 kg',
+        '용도': '부품 조립, 검사',
+        '가격대': '2,500 ~ 4,000만원'
+      }
+    },
+    {
+      name: '청소로봇 R-20',
+      image: 'img/background/innovation.jpg',
+      desc: '자율주행 센서를 탑재한 스마트 청소 로봇으로, 대형 사무실과 공장 바닥을 자동으로 청소합니다. 장애물 회피 기능이 내장되어 있습니다.',
+      specs: {
+        '크기': '450 x 450 x 400 mm',
+        '무게': '18 kg',
+        '용도': '실내 자동 청소',
+        '가격대': '300 ~ 600만원'
+      }
+    }
+  ];
+
+  const productGrid = document.getElementById('productGrid');
+
+  // 제품 데이터를 기반으로 카드 DOM을 동적으로 생성
+  products.forEach((product, index) => {
+    const card = document.createElement('div');
+    card.className = 'product-card';
+    card.dataset.index = index;
+    card.innerHTML = `
+      <img src="${product.image}" alt="${product.name}">
+      <div class="product-name">${product.name}</div>
+    `;
+    productGrid.appendChild(card);
+  });
+
+  const modalOverlay = document.getElementById('modalOverlay');
+  const modalBox = document.getElementById('modalBox');
+  const modalClose = document.getElementById('modalClose');
+  const modalImg = document.getElementById('modalImg');
+  const modalName = document.getElementById('modalName');
+  const modalDesc = document.getElementById('modalDesc');
+  const modalSpecs = document.getElementById('modalSpecs');
+
+  // 클릭한 제품 카드 정보를 모달에 채워 표시
+  function openModal(product) {
+    modalImg.src = product.image;
+    modalImg.alt = product.name;
+    modalName.textContent = product.name;
+    modalDesc.textContent = product.desc;
+
+    modalSpecs.innerHTML = '';
+    Object.keys(product.specs).forEach((key) => {
+      const li = document.createElement('li');
+      li.innerHTML = `<strong>${key}</strong>${product.specs[key]}`;
+      modalSpecs.appendChild(li);
+    });
+
+    modalOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden'; // 모달 열릴 때 배경 스크롤 방지
+  }
+
+  // 모달 닫기 (애니메이션 이후 display 처리)
+  function closeModal() {
+    modalOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  productGrid.addEventListener('click', (e) => {
+    const card = e.target.closest('.product-card');
+    if (!card) return;
+    const index = Number(card.dataset.index);
+    openModal(products[index]);
+  });
+
+  // X 버튼 클릭으로 닫기
+  modalClose.addEventListener('click', closeModal);
+
+  // 배경(오버레이) 클릭으로 닫기 - 모달 박스 내부 클릭은 제외
+  modalOverlay.addEventListener('click', (e) => {
+    if (e.target === modalOverlay) {
+      closeModal();
+    }
+  });
+
+  // ESC 키 입력으로 닫기
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+      closeModal();
+    }
+  });
+</script>
+</body>
+</html>
